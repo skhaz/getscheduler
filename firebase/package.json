@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "deploy": "firebase deploy --only functions,firestore:rules,firestore:indexes,storage",
+    "format": "prettier '**/*' --write --ignore-unknown"
+  },
+  "devDependencies": {
+    "firebase-tools": "^11.8.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.1.0",
+    "pretty-quick": "^3.1.3"
+  }
+}

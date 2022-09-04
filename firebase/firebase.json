@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "predeploy": ["npm --prefix functions run lint", "npm --prefix functions run build"]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "main": "lib/src/index.js",
+  "engines": {
+    "node": "16"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clear": "rimraf lib",
+    "lint": "eslint --max-warnings=0 --ext .ts ."
+  },
+  "dependencies": {
+    "@google-cloud/scheduler": "^3.0.3",
+    "firebase-admin": "^11.0.1",
+    "firebase-functions": "^3.22.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "eslint": "^8.23.0",
+    "firebase-tools": "^11.8.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.2"
+  }
+}
