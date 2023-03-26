@@ -1,15 +1,11 @@
-import { EmotionCache } from '@emotion/cache'
 import createEmotionServer from '@emotion/server/create-instance'
-import { NextComponentType } from 'next'
-import type { AppContextType, AppInitialProps, AppPropsType } from 'next/dist/shared/lib/utils'
+import { AppType } from 'next/app'
 import type { DocumentInitialProps } from 'next/document'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import createEmotionCache from 'src/createEmotionCache'
 import theme from 'src/theme'
 
 type MyDocumentInitialProps = DocumentInitialProps & { emotionStyleTags?: JSX.Element[] }
-
-type EnhancedApp = NextComponentType<AppContextType, AppInitialProps, AppPropsType & { emotionCache?: EmotionCache }>
 
 export default class MyDocument extends Document<MyDocumentInitialProps> {
   render() {
@@ -44,9 +40,9 @@ MyDocument.getInitialProps = async (context) => {
 
   context.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App: EnhancedApp) =>
+      enhanceApp: (App: AppType) =>
         function EnhanceApp(props) {
-          return <App emotionCache={cache} {...props} />
+          return <App {...{ ...props, emotionCache: cache }} />
         },
     })
 
