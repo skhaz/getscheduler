@@ -3,7 +3,7 @@
 .SILENT:
 
 deploy:
-	gcloud app deploy --quiet --project=getscheduler
+	gcloud app deploy --quiet --project=getscheduler-app
 
 format:
 	isort main.py
