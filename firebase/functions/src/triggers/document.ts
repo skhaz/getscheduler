@@ -25,7 +25,7 @@ export const onCreateTrigger = async (
   const parent = scheduler.locationPath(settings.project.id, settings.project.location)
   const trigger = snapshot.data() as Trigger
 
-  const job: protos.google.cloud.scheduler.v1.IJob = {
+  const job = {
     appEngineHttpTarget: {
       httpMethod: 'POST' as const,
       headers: { 'Content-Type': 'application/json' },
@@ -44,12 +44,12 @@ export const onCreateTrigger = async (
     retryConfig: {
       retryCount: trigger.retry,
     },
-  }
+  } satisfies protos.google.cloud.scheduler.v1.IJob;
 
-  const request: protos.google.cloud.scheduler.v1.ICreateJobRequest = {
+  const request = {
     parent: parent,
     job: job,
-  }
+  } satisfies protos.google.cloud.scheduler.v1.ICreateJobRequest;
 
   const [response] = await scheduler.createJob(request)
   const { name } = response
