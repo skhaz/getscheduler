@@ -36,12 +36,8 @@ const Home: NextPage = () => (
             Easy and realiable online free cron jobs
           </Typography>
           <Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
-            <NextLink href="/dashboard" passHref>
-              <Button variant="contained">Dashboard</Button>
-            </NextLink>
-            <NextLink href="/help" passHref>
-              <Button variant="outlined">Help</Button>
-            </NextLink>
+            <Button href="/dashboard" component={NextLink} variant="contained">Dashboard</Button>
+            <Button href="/help" component={NextLink} variant="outlined">Help</Button>
           </Stack>
         </Container>
       </Box>
