@@ -6,9 +6,8 @@ import type { FunctionComponent } from 'react'
 const Copyright: FunctionComponent = () => (
   <Typography variant="body2" color="text.secondary" align="center">
     {'Copyright © '}
-    <NextLink href="https://skhaz.dev" passHref>
-      <MuiLink color="inherit">Rodrigo Delduca</MuiLink>
-    </NextLink>{' '}
+    <MuiLink href="https://skhaz.dev" component={NextLink} color="inherit">Rodrigo Delduca</MuiLink>
+    {' '}
     {new Date().getFullYear()}
     {'.'}
   </Typography>
