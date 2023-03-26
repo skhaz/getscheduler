@@ -30,7 +30,7 @@ const Home: NextPage = () => (
       >
         <Container maxWidth="sm">
           <Typography component="h1" variant="h2" align="center" color="text.primary" gutterBottom>
-            Schedule anytime
+            Schedule Anytime
           </Typography>
           <Typography variant="h5" align="center" color="text.secondary" paragraph>
             Easy and realiable online free cron jobs
