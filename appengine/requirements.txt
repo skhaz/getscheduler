@@ -1,4 +1,4 @@
-certifi==2022.6.15
-flask==2.2.2
+certifi==2022.12.7
+flask==2.2.3
 gunicorn==20.1.0
-pycurl==7.45.1
+pycurl==7.45.2

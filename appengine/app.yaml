@@ -1,6 +1,3 @@
-runtime: custom
-env: flex
+runtime: python311
+entrypoint: gunicorn -b :$PORT main:app
 
-automatic_scaling:
-  min_num_instances: 1
-  max_num_instances: 3

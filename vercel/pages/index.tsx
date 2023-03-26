@@ -10,51 +10,49 @@ import Copyright from 'components/Copyright'
 import type { NextPage } from 'next'
 import NextLink from 'next/link'
 
-const Home: NextPage = () => {
-  return (
-    <>
-      <AppBar position="relative">
-        <Toolbar>
-          <Alarm sx={{ mr: 2 }} />
-          <Typography variant="h6" color="inherit" noWrap>
-            Get Scheduler
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <main>
-        <Box
-          sx={{
-            bgcolor: 'background.paper',
-            pt: 8,
-            pb: 6,
-          }}
-        >
-          <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="text.primary" gutterBottom>
-              Schedule anytime
-            </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Easy and realiable online free cron jobs
-            </Typography>
-            <Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
-              <NextLink href="/dashboard" passHref>
-                <Button variant="contained">Dashboard</Button>
-              </NextLink>
-              <NextLink href="/help" passHref>
-                <Button variant="outlined">Help</Button>
-              </NextLink>
-            </Stack>
-          </Container>
-        </Box>
-      </main>
-      <Box component="footer">
-        <Typography variant="subtitle1" align="center" color="text.secondary" component="p">
-          Built with Google Cloud & Firebase
+const Home: NextPage = () => (
+  <>
+    <AppBar position="relative">
+      <Toolbar>
+        <Alarm sx={{ mr: 2 }} />
+        <Typography variant="h6" color="inherit" noWrap>
+          Get Scheduler
         </Typography>
-        <Copyright />
+      </Toolbar>
+    </AppBar>
+    <main>
+      <Box
+        sx={{
+          bgcolor: 'background.paper',
+          pt: 8,
+          pb: 6,
+        }}
+      >
+        <Container maxWidth="sm">
+          <Typography component="h1" variant="h2" align="center" color="text.primary" gutterBottom>
+            Schedule anytime
+          </Typography>
+          <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            Easy and realiable online free cron jobs
+          </Typography>
+          <Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
+            <NextLink href="/dashboard" passHref>
+              <Button variant="contained">Dashboard</Button>
+            </NextLink>
+            <NextLink href="/help" passHref>
+              <Button variant="outlined">Help</Button>
+            </NextLink>
+          </Stack>
+        </Container>
       </Box>
-    </>
-  )
-}
+    </main>
+    <Box component="footer">
+      <Typography variant="subtitle1" align="center" color="text.secondary" component="p">
+        Built with Google Cloud & Firebase
+      </Typography>
+      <Copyright />
+    </Box>
+  </>
+)
 
 export default Home
