@@ -5,8 +5,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier '**/*' --write --ignore-unknown",
-    "deploy": "vercel --prod"
+    "format": "prettier '**/*' --write --ignore-unknown"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
