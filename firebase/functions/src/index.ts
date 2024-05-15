@@ -16,4 +16,4 @@ export const onCreateTrigger = functions.firestore
 
 export const onDeleteTrigger = functions.firestore
   .document('triggers/{uid}')
-  .onDelete((snapshot, context) => triggers.onDeleteTrigger(firestore, scheduler, snapshot))
+  .onDelete((snapshot) => triggers.onDeleteTrigger(firestore, scheduler, snapshot))
